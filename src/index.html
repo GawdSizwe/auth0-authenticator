@@ -21,6 +21,28 @@
 
 <body>
   <app-root></app-root>
+
+  <!-- Approve and Reject Buttons -->
+  <div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 1rem; z-index: 1000;">
+    <button onclick="handleReject()" style="padding: 10px 20px; background: #ff4444; color: white; border: none; border-radius: 8px;">
+      Reject
+    </button>
+    <button onclick="handleApprove()" style="padding: 10px 20px; background: #00C851; color: white; border: none; border-radius: 8px;">
+      Approve
+    </button>
+  </div>
+
+  <script>
+    function handleReject() {
+      alert('Rejected!');
+      // Add your rejection logic here
+    }
+
+    function handleApprove() {
+      alert('Approved!');
+      // Add your approval logic here
+    }
+  </script>
 </body>
 
 </html>

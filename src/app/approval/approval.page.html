@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Approval</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="isLoading" class="ion-text-center">
+    <ion-spinner></ion-spinner>
+  </div>
+  <div *ngIf="!isLoading">
+    <div *ngIf="authError" class="error-container">
+      <p>{{ authError }}</p>
+      <ion-button (click)="login()">Try Again</ion-button>
+    </div>
+    <div *ngIf="!authError">
+      <p *ngIf="deviceId">Device ID: {{ deviceId }}</p>
+      <ion-button expand="full" (click)="approve()">Approve</ion-button>
+      <ion-button expand="full" (click)="reject()">Reject</ion-button>
+      <ion-button expand="full" (click)="logout()">Logout</ion-button>
+    </div>
+  </div>
+</ion-content>
